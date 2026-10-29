@@ -1,0 +1,8 @@
+/** Interactive iframe: theme fonts */
+:root {
+  --mighty-theme-body-font-family: "Inter";
+  --mighty-theme-heading-font-family: "Inter";
+  --mighty-theme-subheading-font-family: "Inter";
+}
+/** Interactive iframe: match course body typeface */
+body { font-family: var(--mighty-theme-body-font-family, "Inter"); }

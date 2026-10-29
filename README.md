@@ -1,8 +1,10 @@
 # Cisco's Business Management System (BMS Module 2)
 
-SCORM 2004 3rd Edition package for the BMS Module 2 course, plus a course page.
+SCORM 2004 3rd Edition package for the BMS Module 2 course, published exactly as exported from Articulate Rise.
 
 - `Cisco Business Management System.zip`: the SCORM package. Upload it to an LMS or SCORM Cloud.
-- `docs/`: the course page (served with GitHub Pages). It has the overview, objectives, the BMS pyramid video, the three custom interactivities, the job aid and the transcript.
+- `docs/`: the same package, unzipped and served with GitHub Pages. `docs/index.html` is a small launcher that provides an in-memory SCORM API (the Rise export refuses to run without one) and loads `scormdriver/indexAPI.html` full-screen. The course files are unmodified.
 
-The SCORM export only plays inside an LMS, so the course page previews the media and interactivities rather than hosting the course player.
+Progress is not saved on the Pages version; each visit starts from the beginning.
+
+Live: https://anubhpancisco.github.io/cisco-bms-module-2/

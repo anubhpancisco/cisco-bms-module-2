@@ -1,0 +1,50 @@
+{
+    "version": 1,
+    "name": "Pull to reveal",
+    "formElements": [
+        {
+            "type": "richtext-input",
+            "formKey": "question",
+            "label": "Question",
+            "placeholder": "e.g., What is the capital of France?"
+        },
+        {
+            "type": "richtext-input",
+            "formKey": "hint",
+            "label": "Instructions (side by side)"
+        },
+        {
+            "type": "richtext-input",
+            "formKey": "hintStacked",
+            "label": "Instructions (stacked)"
+        },
+        {
+            "type": "richtext-input",
+            "formKey": "answer",
+            "label": "Answer"
+        },
+        {
+            "type": "panel",
+            "headerTitle": "Appearance",
+            "expandable": true,
+            "collapsed": true,
+            "formElements": [
+                {
+                    "type": "color-input",
+                    "formKey": "tabColor",
+                    "label": "Tab color"
+                },
+                {
+                    "type": "color-input",
+                    "formKey": "chevronColor",
+                    "label": "Chevron color"
+                },
+                {
+                    "type": "color-input",
+                    "formKey": "lineColor",
+                    "label": "Divider line color"
+                }
+            ]
+        }
+    ]
+}
