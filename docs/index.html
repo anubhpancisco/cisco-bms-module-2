@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cisco's Business Management System | Course Page</title>
+<meta name="description" content="Course page for Cisco's Business Management System (BMS Module 2): overview, objectives, video, interactivities, job aid, transcript and SCORM download." />
+<style>
+  @font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url(fonts/Inter-Regular.woff) format("woff"); }
+  @font-face { font-family: "Inter"; font-weight: 500; font-display: swap; src: url(fonts/Inter-Medium.woff) format("woff"); }
+  @font-face { font-family: "Inter"; font-weight: 700; font-display: swap; src: url(fonts/Inter-Bold.woff) format("woff"); }
+
+  :root { --mid: #07182D; --med: #0A60FF; --cis: #02C8FF; --line: #D6E0EC; --soft: #F3F8FE; --muted: #4A5B70; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: "Inter", "Segoe UI", Arial, sans-serif; color: var(--mid); background: #fff; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  a { color: var(--med); }
+  :focus-visible { outline: 3px solid var(--cis); outline-offset: 3px; border-radius: 6px; }
+
+  #topline { height: 6px; background: linear-gradient(90deg, #7C5CFA 0%, #0A60FF 22%, #02C8FF 45%, #12B5A6 62%, #F2B01E 80%, #FF7A1A 100%); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); }
+
+  header.hero { position: relative; overflow: hidden; background: var(--soft); border-bottom: 1px solid var(--line); }
+  header.hero::before { content: ""; position: absolute; width: 720px; height: 720px; right: -220px; top: -300px; border-radius: 50%; background: radial-gradient(closest-side, rgba(2,200,255,.18), rgba(2,200,255,0)); }
+  header.hero .wrap { position: relative; padding-top: 56px; padding-bottom: 52px; }
+  .eyebrow { font-weight: 500; font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--med); }
+  h1 { font-size: clamp(30px, 5vw, 46px); line-height: 1.12; margin: 10px 0 16px; letter-spacing: -.01em; }
+  .lede { max-width: 720px; font-size: 18px; color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 26px; }
+  .chip { font-size: 13px; font-weight: 500; padding: 6px 14px; border-radius: 999px; background: #fff; border: 1px solid var(--line); color: var(--mid); }
+
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 12px; font-weight: 700; font-size: 15px; text-decoration: none; border: 2px solid var(--med); transition: transform .15s, box-shadow .15s, background .15s; }
+  .btn.primary { background: var(--med); color: #fff; }
+  .btn.ghost { background: #fff; color: var(--med); }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(10,96,255,.22); }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  nav.toc { position: sticky; top: 0; z-index: 5; background: rgba(255,255,255,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  nav.toc .wrap { display: flex; gap: 6px; overflow-x: auto; padding-top: 10px; padding-bottom: 10px; }
+  nav.toc a { white-space: nowrap; text-decoration: none; color: var(--muted); font-weight: 500; font-size: 14px; padding: 7px 14px; border-radius: 999px; }
+  nav.toc a:hover { background: var(--soft); color: var(--med); }
+
+  section { padding: 54px 0 12px; }
+  h2 { font-size: 28px; letter-spacing: -.01em; margin-bottom: 8px; }
+  .sub { color: var(--muted); max-width: 720px; margin-bottom: 24px; }
+
+  ol.objectives { list-style: none; counter-reset: o; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  ol.objectives li { counter-increment: o; display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+  ol.objectives li::before { content: counter(o); flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; font-size: 14px; color: #fff; background: linear-gradient(135deg, var(--med), var(--cis)); }
+
+  .outline { display: grid; gap: 12px; }
+  .lesson { display: grid; grid-template-columns: 44px 1fr; gap: 16px; padding: 16px 18px; border: 1px solid var(--line); border-radius: 14px; }
+  .lesson .n { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-weight: 700; background: var(--soft); color: var(--med); }
+  .lesson h3 { font-size: 17px; }
+  .lesson p { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
+  .tag { display: inline-block; margin: 8px 6px 0 0; font-size: 12px; font-weight: 500; padding: 3px 10px; border-radius: 999px; background: var(--soft); color: var(--med); border: 1px solid var(--line); }
+
+  .media { border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 18px 44px rgba(7,24,45,.10); }
+  .media video { display: block; width: 100%; height: auto; }
+
+  .itx { margin-bottom: 40px; }
+  .itx h3 { font-size: 20px; margin-bottom: 4px; }
+  .itx .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-bottom: 14px; color: var(--muted); font-size: 14.5px; }
+  .frame { border: 2px solid var(--line); border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 18px 44px rgba(7,24,45,.10); }
+  .frame iframe { display: block; width: 100%; border: 0; }
+
+  .cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card { display: block; text-decoration: none; color: inherit; padding: 22px; border: 1px solid var(--line); border-radius: 16px; transition: transform .15s, box-shadow .15s, border-color .15s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(7,24,45,.10); border-color: var(--cis); }
+  .card h3 { font-size: 18px; margin: 6px 0; }
+  .card p { color: var(--muted); font-size: 14.5px; }
+  .card .pill { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--med); }
+
+  .note { margin-top: 18px; padding: 16px 18px; border-left: 4px solid var(--cis); background: var(--soft); border-radius: 0 12px 12px 0; font-size: 14.5px; color: var(--muted); }
+  footer { margin-top: 64px; padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
+
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn, .card { transition: none; } }
+</style>
+</head>
+<body>
+<div id="topline"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">BMS Module 2</p>
+    <h1>Cisco's Business Management System</h1>
+    <p class="lede">An introduction to Cisco's Business Management System (BMS) and its components: the Quality, Information Security, Environmental, and Occupational Health &amp; Safety systems. It also covers the Corporate Core Business Processes and how they align with BMS requirements.</p>
+    <div class="chips">
+      <span class="chip">About 15 minutes</span>
+      <span class="chip">5 lessons</span>
+      <span class="chip">6 knowledge check questions</span>
+      <span class="chip">SCORM 2004 3rd Edition</span>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/anubhpancisco/cisco-bms-module-2/raw/main/Cisco%20Business%20Management%20System.zip" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M4 20h16"/></svg>
+        Download SCORM package
+      </a>
+      <a class="btn ghost" href="#video">Watch the video</a>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Page sections">
+  <div class="wrap">
+    <a href="#objectives">Objectives</a>
+    <a href="#outline">Course outline</a>
+    <a href="#video">Video</a>
+    <a href="#interactivities">Interactivities</a>
+    <a href="#downloads">Downloads</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="objectives">
+    <h2>Learning objectives</h2>
+    <p class="sub">After reviewing this module, you will be able to:</p>
+    <ol class="objectives">
+      <li>Explain Cisco's Business Management System framework</li>
+      <li>Describe Cisco's Quality Management System (QMS)</li>
+      <li>Describe Cisco's Environmental Health Management System (EMS)</li>
+      <li>Describe Cisco's Occupational Health &amp; Safety System (OH&amp;S)</li>
+      <li>Describe Cisco's Information Security Management System (ISMS)</li>
+      <li>Explain Cisco's Corporate Core Business Processes and how they uphold BMS requirements</li>
+    </ol>
+  </section>
+
+  <section id="outline">
+    <h2>Course outline</h2>
+    <p class="sub">Five lessons, taken in order.</p>
+    <div class="outline">
+      <div class="lesson"><div class="n">1</div><div><h3>Learning Objectives</h3><p>What you will be able to do by the end of the module.</p></div></div>
+      <div class="lesson"><div class="n">2</div><div><h3>Cisco's Business Management System</h3><p>Why every employee plays a role in quality and corporate social responsibility, and how the BMS supports it.</p><span class="tag">Video</span><span class="tag">Interactivity</span></div></div>
+      <div class="lesson"><div class="n">3</div><div><h3>BMS Framework &amp; Underlying Systems</h3><p>How the BMS brings systems, policies, processes and infrastructure into one approach.</p><span class="tag">Interactivity: Go deeper</span><span class="tag">6-question knowledge check</span></div></div>
+      <div class="lesson"><div class="n">4</div><div><h3>Cisco's Core Business Processes</h3><p>The processes that apply to every employee, and the elements they set requirements for.</p><span class="tag">Interactivity: BMS elements</span></div></div>
+      <div class="lesson"><div class="n">5</div><div><h3>Key Takeaways</h3><p>A short recap, then a feedback survey.</p><span class="tag">Interactivity: Guided chat</span></div></div>
+    </div>
+  </section>
+
+  <section id="video">
+    <h2>Video: the BMS pyramid</h2>
+    <p class="sub">A 2.5 minute walkthrough of how the BMS is built, from the standards up to the processes. Used in lesson 2.</p>
+    <div class="media">
+      <video controls preload="metadata" poster="assets/BMS-Pyramid.png">
+        <source src="assets/BMS-Pyramid.mp4" type="video/mp4" />
+        Your browser does not support embedded video. <a href="assets/BMS-Pyramid.mp4">Download the video</a>.
+      </video>
+    </div>
+  </section>
+
+  <section id="interactivities">
+    <h2>Interactivities</h2>
+    <p class="sub">The three custom interactivities used in the course, exactly as they appear in the SCORM package. Try them here, or open any one in its own tab.</p>
+
+    <div class="itx">
+      <h3>1. Systems: Go deeper</h3>
+      <div class="meta"><span>Lesson 3. Flip each system card, then go deeper into its purpose, focus and certifications.</span><a href="interactivities/systems-go-deeper.html" target="_blank" rel="noopener">Open in new tab</a></div>
+      <div class="frame"><iframe src="interactivities/systems-go-deeper.html" title="BMS Systems: Go deeper" style="height: 900px" loading="lazy"></iframe></div>
+    </div>
+
+    <div class="itx">
+      <h3>2. BMS Elements: the BMS dial</h3>
+      <div class="meta"><span>Lesson 4. Turn the dial to explore each element of the Corporate Core Business Processes.</span><a href="interactivities/bms-dial.html" target="_blank" rel="noopener">Open in new tab</a></div>
+      <div class="frame"><iframe src="interactivities/bms-dial.html" title="BMS Elements: BMS Dial" style="height: 700px" loading="lazy"></iframe></div>
+    </div>
+
+    <div class="itx">
+      <h3>3. Key Takeaways: guided chat</h3>
+      <div class="meta"><span>Lesson 5. Work through the course recap as a guided conversation.</span><a href="interactivities/key-takeaways.html" target="_blank" rel="noopener">Open in new tab</a></div>
+      <div class="frame"><iframe src="interactivities/key-takeaways.html" title="Key Takeaways: Guided Chat" style="height: 720px" loading="lazy"></iframe></div>
+    </div>
+  </section>
+
+  <section id="downloads">
+    <h2>Downloads</h2>
+    <p class="sub">Companion files for the BMS pyramid video.</p>
+    <div class="cards">
+      <a class="card" href="downloads/BMS-Pyramid-Job-Aid.pdf" download>
+        <span class="pill">PDF</span>
+        <h3>Job aid</h3>
+        <p>A one-glance summary of the BMS pyramid to keep at your desk.</p>
+      </a>
+      <a class="card" href="downloads/BMS-Pyramid-Transcript.pdf" download>
+        <span class="pill">PDF</span>
+        <h3>Video transcript</h3>
+        <p>The full narration of the BMS pyramid video, as text.</p>
+      </a>
+      <a class="card" href="https://github.com/anubhpancisco/cisco-bms-module-2/raw/main/Cisco%20Business%20Management%20System.zip" download>
+        <span class="pill">ZIP</span>
+        <h3>SCORM package</h3>
+        <p>The complete course (SCORM 2004 3rd Edition) to upload to your LMS.</p>
+      </a>
+    </div>
+    <p class="note">The full course, with its knowledge checks, progress tracking and completion reporting, plays inside an LMS. The SCORM export checks that it is running in an LMS, so this page previews the course's media and interactivities rather than hosting the course player itself.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Cisco's Business Management System &middot; BMS Module 2</div>
+</footer>
+</body>
+</html>
